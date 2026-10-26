@@ -1,0 +1,17 @@
+# Xcode
+DerivedData/
+build/
+*.xcuserstate
+xcuserdata/
+*.xcresult
+
+# macOS
+.DS_Store
+
+# Never commit secrets or personal mail data
+*.store
+*.store-shm
+*.store-wal
+triage_labels.json
+GoogleService-Info.plist
+.env

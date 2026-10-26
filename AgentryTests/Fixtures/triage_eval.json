@@ -1,0 +1,242 @@
+[
+ {
+  "sender": "Ananya Rao",
+  "address": "ananya@northwindlabs.dev",
+  "subject": "Prod deploy blocked — need sign-off today",
+  "body": "The release is blocked on your approval. We need sign-off before 5 PM today or we miss the launch.",
+  "label": "urgent",
+  "jobStage": "none"
+ },
+ {
+  "sender": "Manager",
+  "address": "boss@northwindlabs.dev",
+  "subject": "Client call in 30 min",
+  "body": "The client moved the call to 3:30 today. Please join and bring the numbers ASAP.",
+  "label": "urgent",
+  "jobStage": "none"
+ },
+ {
+  "sender": "Landlord",
+  "address": "owner.flat@gmail.com",
+  "subject": "Water supply off",
+  "body": "Water will be off from 2pm today for urgent repairs. Please store water immediately.",
+  "label": "urgent",
+  "jobStage": "none"
+ },
+ {
+  "sender": "Dr. Iyer",
+  "address": "lakshmi.iyer@university.edu",
+  "subject": "Viva moved to tomorrow",
+  "body": "Your viva has been moved to tomorrow at 9 AM. Please confirm today that you can attend.",
+  "label": "urgent",
+  "jobStage": "none"
+ },
+ {
+  "sender": "Bank",
+  "address": "alerts@hdfcbank.net",
+  "subject": "Card blocked",
+  "body": "Your card was blocked after 3 wrong PIN attempts. Call us immediately if this wasn't you.",
+  "label": "urgent",
+  "jobStage": "none"
+ },
+ {
+  "sender": "Ravi Kumar",
+  "address": "ravi.kumar@gmail.com",
+  "subject": "Trip to Coorg?",
+  "body": "A few of us are planning a Coorg trip next weekend. Are you in? Need headcount by Wednesday.",
+  "label": "needs_reply",
+  "jobStage": "none"
+ },
+ {
+  "sender": "Karthik",
+  "address": "karthik@northwindlabs.dev",
+  "subject": "API question",
+  "body": "Should the /orders endpoint return paginated results by default? Let me know when you can.",
+  "label": "needs_reply",
+  "jobStage": "none"
+ },
+ {
+  "sender": "Priya",
+  "address": "priya.m@gmail.com",
+  "subject": "slides",
+  "body": "Hey, can you send me the slides from yesterday's talk?",
+  "label": "needs_reply",
+  "jobStage": "none"
+ },
+ {
+  "sender": "Mom",
+  "address": "mom.b@gmail.com",
+  "subject": "Sunday",
+  "body": "Are you coming home this Sunday? I'll make biryani.",
+  "label": "needs_reply",
+  "jobStage": "none"
+ },
+ {
+  "sender": "Meera from Zentrix",
+  "address": "careers@zentrix.io",
+  "subject": "Interview invitation: iOS Engineer",
+  "body": "Thank you for applying to the iOS Engineer role at Zentrix. Could you share 2–3 slots for a technical interview this week?",
+  "label": "needs_reply",
+  "jobStage": "interview"
+ },
+ {
+  "sender": "Rahul",
+  "address": "rahul@northwindlabs.dev",
+  "subject": "Out next week",
+  "body": "Could you act as the point of contact for the vendor while I'm away next week?",
+  "label": "needs_reply",
+  "jobStage": "none"
+ },
+ {
+  "sender": "Professor",
+  "address": "prof.k@university.edu",
+  "subject": "Recommendation letter",
+  "body": "Happy to write the letter. Which universities and what are the deadlines?",
+  "label": "needs_reply",
+  "jobStage": "none"
+ },
+ {
+  "sender": "Bluepeak Recruiting",
+  "address": "talent@bluepeak.ai",
+  "subject": "Online assessment — Software Engineer I",
+  "body": "As the next step for the Software Engineer I role at Bluepeak, please complete the online coding assessment within 3 days.",
+  "label": "urgent",
+  "jobStage": "assessment"
+ },
+ {
+  "sender": "OrbitPay Careers",
+  "address": "no-reply@orbitpay.in",
+  "subject": "We received your application",
+  "body": "Thanks for applying for the Backend Developer position at OrbitPay. Our team will review your application.",
+  "label": "fyi",
+  "jobStage": "applied"
+ },
+ {
+  "sender": "Lumen Analytics",
+  "address": "jobs@lumenanalytics.com",
+  "subject": "Update on your application",
+  "body": "Unfortunately, we have decided to move forward with other candidates for the Data Analyst Intern role.",
+  "label": "fyi",
+  "jobStage": "rejected"
+ },
+ {
+  "sender": "Amazon",
+  "address": "shipment-tracking@amazon.in",
+  "subject": "Your order has shipped",
+  "body": "Your order of 'USB-C cable' has shipped and will arrive Thursday.",
+  "label": "fyi",
+  "jobStage": "none"
+ },
+ {
+  "sender": "HDFC Bank",
+  "address": "alerts@hdfcbank.net",
+  "subject": "Statement ready",
+  "body": "Your monthly account statement is ready. Log in to the app to view it.",
+  "label": "fyi",
+  "jobStage": "none"
+ },
+ {
+  "sender": "Google",
+  "address": "no-reply@accounts.google.com",
+  "subject": "Security alert",
+  "body": "New sign-in on Mac. If this was you, you don't need to do anything.",
+  "label": "fyi",
+  "jobStage": "none"
+ },
+ {
+  "sender": "GitHub",
+  "address": "noreply@github.com",
+  "subject": "[agentry] PR merged",
+  "body": "Your pull request #12 was merged into main.",
+  "label": "fyi",
+  "jobStage": "none"
+ },
+ {
+  "sender": "Dr. Iyer",
+  "address": "lakshmi.iyer@university.edu",
+  "subject": "Project report",
+  "body": "Reminder that the final project report is due this Friday by 11:59 PM via the portal.",
+  "label": "fyi",
+  "jobStage": "none"
+ },
+ {
+  "sender": "IndiGo",
+  "address": "noreply@goindigo.in",
+  "subject": "Booking confirmed",
+  "body": "Your flight 6E-512 Hyderabad to Bengaluru on 4 Nov is confirmed. PNR X7K2LP.",
+  "label": "fyi",
+  "jobStage": "none"
+ },
+ {
+  "sender": "The Swift Weekly",
+  "address": "newsletter@swiftweekly.dev",
+  "subject": "Issue #212",
+  "body": "This week: what's new in Swift 6.4 and SwiftData tips. Unsubscribe anytime.",
+  "label": "ignore",
+  "jobStage": "none"
+ },
+ {
+  "sender": "UrbanCart",
+  "address": "deals@urbancart.shop",
+  "subject": "Flat 60% off today",
+  "body": "Mega sale on electronics. Use code MEGA60. Unsubscribe from promotional emails.",
+  "label": "ignore",
+  "jobStage": "none"
+ },
+ {
+  "sender": "Medium",
+  "address": "noreply@medium.com",
+  "subject": "Stories for you",
+  "body": "Top stories picked for you this week. Manage your notification settings.",
+  "label": "ignore",
+  "jobStage": "none"
+ },
+ {
+  "sender": "LinkedIn",
+  "address": "notifications@linkedin.com",
+  "subject": "You appeared in 9 searches",
+  "body": "See who's looking at your profile this week.",
+  "label": "ignore",
+  "jobStage": "none"
+ },
+ {
+  "sender": "Swiggy",
+  "address": "marketing@swiggy.in",
+  "subject": "Hungry?",
+  "body": "50% off on your next 3 orders. Promo code FEAST50. Unsubscribe.",
+  "label": "ignore",
+  "jobStage": "none"
+ },
+ {
+  "sender": "Zomato",
+  "address": "newsletter@zomato.com",
+  "subject": "Weekend specials",
+  "body": "Discover new restaurants near you this weekend.",
+  "label": "ignore",
+  "jobStage": "none"
+ },
+ {
+  "sender": "Zentrix Talent",
+  "address": "careers@zentrix.io",
+  "subject": "Offer letter — iOS Engineer",
+  "body": "Congratulations! We're delighted to offer you the iOS Engineer position at Zentrix. Please let us know your decision by Monday.",
+  "label": "urgent",
+  "jobStage": "offer"
+ },
+ {
+  "sender": "Dad",
+  "address": "srinivas.b@gmail.com",
+  "subject": "Electricity bill",
+  "body": "Can you pay the electricity bill online this week? Due date is the 30th.",
+  "label": "needs_reply",
+  "jobStage": "none"
+ },
+ {
+  "sender": "Coursera",
+  "address": "no-reply@coursera.org",
+  "subject": "Course certificate",
+  "body": "Congratulations on completing Machine Learning! Your certificate is ready.",
+  "label": "fyi",
+  "jobStage": "none"
+ }
+]
