@@ -15,6 +15,14 @@ final class AppleMailService: MailProvider, DraftSending {
     private(set) var accountAddresses: [String] = []
     private var drafts: [String: StoredDraft]
 
+    /// Mail message IDs already handed to the pipeline.
+    private var seenIDs: [String] {
+        get { UserDefaults.standard.stringArray(forKey: "appleMail.seenIDs") ?? [] }
+        set { UserDefaults.standard.set(newValue, forKey: "appleMail.seenIDs") }
+    }
+
+    func resetSeen() { seenIDs = [] }
+
     nonisolated struct StoredDraft: Codable {
         var to: String
         var subject: String
@@ -33,12 +41,15 @@ final class AppleMailService: MailProvider, DraftSending {
     // MARK: - Reading
 
     func fetchNewMessages() async throws -> [FetchedEmail] {
-        // First run: last 3 days. Later: since the last check (with a small overlap; duplicates are skipped).
-        let since = settings.appleMailLastFetch.map { $0.addingTimeInterval(-120) } ?? Date.now.addingTimeInterval(-3 * 86400)
-        let json = try await run(Self.fetchScript, args: [String(since.timeIntervalSince1970), "30"])
+        // Rolling 3-day window, so mail that Mail downloads late (e.g. right after adding an account)
+        // is still picked up. Already-seen messages are skipped inside the script (no content fetched).
+        let since = Date.now.addingTimeInterval(-3 * 86400)
+        let seen = seenIDs
+        let json = try await run(Self.fetchScript, args: [String(since.timeIntervalSince1970), "30", seen.joined(separator: ",")])
         let rows = try JSONDecoder().decode([MailRow].self, from: Data(json.utf8))
         settings.appleMailLastFetch = .now
         lastError = nil
+        seenIDs = Array((seen + rows.map(\.id)).suffix(800))
         return rows.map { row in
             let from = MailText.parseAddress(row.sender)
             let body = MailText.clean(row.content)
@@ -149,10 +160,12 @@ final class AppleMailService: MailProvider, DraftSending {
       const since = new Date(parseFloat(argv[0]) * 1000);
       const limit = parseInt(argv[1]);
       const q = Mail.inbox.messages.whose({ dateReceived: { _greaterThan: since } });
+      const seen = new Set((argv[2] || '').split(',').filter(x => x.length > 0));
       const ids = q.id();
       if (ids.length === 0) return '[]';
       const subjects = q.subject(), senders = q.sender(), dates = q.dateReceived(), mids = q.messageId();
-      const order = ids.map((_, i) => i).sort((a, b) => dates[b] - dates[a]).slice(0, limit);
+      const order = ids.map((_, i) => i).filter(i => !seen.has(String(ids[i])))
+        .sort((a, b) => dates[b] - dates[a]).slice(0, limit);
       return JSON.stringify(order.map(i => {
         let content = '';
         try { content = (q[i].content() || '').slice(0, 20000); } catch (e) {}

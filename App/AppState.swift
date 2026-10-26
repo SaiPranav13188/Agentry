@@ -525,6 +525,7 @@ final class AppState {
         settings.mailMode = mode
         settings.lastHistoryID = nil
         settings.appleMailLastFetch = nil
+        appleMail.resetSeen()
         if mode == .demo {
             demo = DemoMailService()
             seedDemoExtras()
@@ -541,6 +542,7 @@ final class AppState {
         try? context.delete(model: Reminder.self)
         try? context.delete(model: JobApplication.self)
         try? context.delete(model: ActivityEntry.self)
+        appleMail.resetSeen()
         save()
     }
 
